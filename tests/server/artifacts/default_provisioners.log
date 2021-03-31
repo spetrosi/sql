@@ -1,0 +1,132 @@
+2021-03-31 12:54:18,472 [standard-inventory-qcow2/MainThread  ] [INFO ]:Start provisioner.
+2021-03-31 12:54:18,473 [standard-inventory-qcow2/MainThread  ] [INFO ]:Path to ansible: /usr/bin/ansible
+2021-03-31 12:54:18,479 [standard-inventory-qcow2/MainThread  ] [INFO ]:Launching virtual machine for /home/spetrosi/Documents/images/rhel-guest-image-8.3-401.x86_64.qcow2
+2021-03-31 12:54:18,555 [standard-inventory-qcow2/MainThread  ] [INFO ]:qemu-kvm is using virtio-rng device
+2021-03-31 12:54:18,573 [standard-inventory-qcow2/MainThread  ] [INFO ]:Qemu CMD: /usr/bin/qemu-kvm -cpu host -enable-kvm -display none -smp 5,sockets=5,cores=1,threads=1 -m 4096 -drive if=none,file=/home/spetrosi/Documents/images/rhel-guest-image-8.3-401.x86_64.qcow2,id=virtio-disk0 -device virtio-blk-pci,drive=virtio-disk0,bootindex=1 -snapshot -cdrom /tmp/inventory-cloud7je4rt7e/cloud-init.iso -net nic,model=virtio -net user,hostfwd=tcp:127.0.0.3:4249-:22 -device virtio-rng -rtc base=utc -serial chardev:pts2 -chardev file,id=pts2,path=/home/spetrosi/.ansible/collections/ansible_collections/microsoft/sql/tests/server/artifacts/rhel-guest-image-8.3-401.x86_64.qcow2.guest.log -vnc 127.0.0.3:1,to=4095
+2021-03-31 12:54:23,579 [standard-inventory-qcow2/MainThread  ] [INFO ]:qemu-kvm is running with VNC server. PID: 331017
+2021-03-31 12:54:23,579 [standard-inventory-qcow2/MainThread  ] [INFO ]:netstat -ltpn4 | grep 331017 # to find VNC server port
+2021-03-31 12:55:13,132 [standard-inventory-qcow2/MainThread  ] [INFO ]:ssh -p 4249 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i /tmp/inventory-cloud7je4rt7e/identity root@127.0.0.3
+2021-03-31 12:55:13,133 [standard-inventory-qcow2/MainThread  ] [INFO ]:Password is: foobar
+2021-03-31 12:55:13,133 [standard-inventory-qcow2/MainThread  ] [INFO ]:Cloudinit init location: /tmp/inventory-cloud7je4rt7e
+2021-03-31 12:55:13,133 [standard-inventory-qcow2/MainThread  ] [INFO ]:export ANSIBLE_INVENTORY=/tmp/inventory-cloud7je4rt7e/inventory
+2021-03-31 12:55:13,133 [standard-inventory-qcow2/MainThread  ] [INFO ]:Wait until parent for provision-script (ansible-playbook) dies or qemu.
+2021-03-31 12:55:19,138 [standard-inventory-qcow2/MainThread  ] [INFO ]:Either parent process or VM process is gone.
+2021-03-31 12:55:19,139 [standard-inventory-qcow2/MainThread  ] [INFO ]:kill 331240 # when finished to debug VM.
+2021-03-31 12:56:02,412 [standard-inventory-qcow2/MainThread  ] [INFO ]:Start provisioner.
+2021-03-31 12:56:02,412 [standard-inventory-qcow2/MainThread  ] [INFO ]:Path to ansible: /usr/bin/ansible
+2021-03-31 12:56:02,415 [standard-inventory-qcow2/MainThread  ] [INFO ]:Launching virtual machine for /home/spetrosi/Documents/images/rhel-guest-image-8.3-401.x86_64.qcow2
+2021-03-31 12:56:02,464 [standard-inventory-qcow2/MainThread  ] [INFO ]:qemu-kvm is using virtio-rng device
+2021-03-31 12:56:02,480 [standard-inventory-qcow2/MainThread  ] [INFO ]:Qemu CMD: /usr/bin/qemu-kvm -cpu host -enable-kvm -display none -smp 5,sockets=5,cores=1,threads=1 -m 4096 -drive if=none,file=/home/spetrosi/Documents/images/rhel-guest-image-8.3-401.x86_64.qcow2,id=virtio-disk0 -device virtio-blk-pci,drive=virtio-disk0,bootindex=1 -snapshot -cdrom /tmp/inventory-cloudr_h_xy13/cloud-init.iso -net nic,model=virtio -net user,hostfwd=tcp:127.0.0.3:2825-:22 -device virtio-rng -rtc base=utc -serial chardev:pts2 -chardev file,id=pts2,path=/home/spetrosi/.ansible/collections/ansible_collections/microsoft/sql/tests/server/artifacts/rhel-guest-image-8.3-401.x86_64.qcow2.guest.log -vnc 127.0.0.3:1,to=4095
+2021-03-31 12:56:06,601 [standard-inventory-qcow2/MainThread  ] [INFO ]:Diagnose ending.
+2021-03-31 12:56:07,736 [standard-inventory-qcow2/MainThread  ] [INFO ]:Start provisioner.
+2021-03-31 12:56:07,736 [standard-inventory-qcow2/MainThread  ] [INFO ]:Path to ansible: /usr/bin/ansible
+2021-03-31 12:56:07,740 [standard-inventory-qcow2/MainThread  ] [INFO ]:Launching virtual machine for /home/spetrosi/Documents/images/rhel-guest-image-8.3-401.x86_64.qcow2
+2021-03-31 12:56:07,787 [standard-inventory-qcow2/MainThread  ] [INFO ]:qemu-kvm is using virtio-rng device
+2021-03-31 12:56:07,804 [standard-inventory-qcow2/MainThread  ] [INFO ]:Qemu CMD: /usr/bin/qemu-kvm -cpu host -enable-kvm -display none -smp 5,sockets=5,cores=1,threads=1 -m 4096 -drive if=none,file=/home/spetrosi/Documents/images/rhel-guest-image-8.3-401.x86_64.qcow2,id=virtio-disk0 -device virtio-blk-pci,drive=virtio-disk0,bootindex=1 -snapshot -cdrom /tmp/inventory-cloud8u0mgw0v/cloud-init.iso -net nic,model=virtio -net user,hostfwd=tcp:127.0.0.3:5204-:22 -device virtio-rng -rtc base=utc -serial chardev:pts2 -chardev file,id=pts2,path=/home/spetrosi/.ansible/collections/ansible_collections/microsoft/sql/tests/server/artifacts/rhel-guest-image-8.3-401.x86_64.qcow2.guest.log -vnc 127.0.0.3:1,to=4095
+2021-03-31 12:56:12,810 [standard-inventory-qcow2/MainThread  ] [INFO ]:qemu-kvm is running with VNC server. PID: 331535
+2021-03-31 12:56:12,810 [standard-inventory-qcow2/MainThread  ] [INFO ]:netstat -ltpn4 | grep 331535 # to find VNC server port
+2021-03-31 12:57:08,802 [standard-inventory-qcow2/MainThread  ] [INFO ]:Start provisioner.
+2021-03-31 12:57:08,802 [standard-inventory-qcow2/MainThread  ] [INFO ]:Path to ansible: /usr/bin/ansible
+2021-03-31 12:57:08,805 [standard-inventory-qcow2/MainThread  ] [INFO ]:Launching virtual machine for /home/spetrosi/Documents/images/rhel-guest-image-8.3-401.x86_64.qcow2
+2021-03-31 12:57:08,854 [standard-inventory-qcow2/MainThread  ] [INFO ]:qemu-kvm is using virtio-rng device
+2021-03-31 12:57:08,870 [standard-inventory-qcow2/MainThread  ] [INFO ]:Qemu CMD: /usr/bin/qemu-kvm -cpu host -enable-kvm -display none -smp 5,sockets=5,cores=1,threads=1 -m 4096 -drive if=none,file=/home/spetrosi/Documents/images/rhel-guest-image-8.3-401.x86_64.qcow2,id=virtio-disk0 -device virtio-blk-pci,drive=virtio-disk0,bootindex=1 -snapshot -cdrom /tmp/inventory-cloudy3tt8cd5/cloud-init.iso -net nic,model=virtio -net user,hostfwd=tcp:127.0.0.3:3317-:22 -device virtio-rng -rtc base=utc -serial chardev:pts2 -chardev file,id=pts2,path=/home/spetrosi/.ansible/collections/ansible_collections/microsoft/sql/tests/server/artifacts/rhel-guest-image-8.3-401.x86_64.qcow2.guest.log -vnc 127.0.0.3:1,to=4095
+2021-03-31 12:57:13,876 [standard-inventory-qcow2/MainThread  ] [INFO ]:qemu-kvm is running with VNC server. PID: 331933
+2021-03-31 12:57:13,876 [standard-inventory-qcow2/MainThread  ] [INFO ]:netstat -ltpn4 | grep 331933 # to find VNC server port
+2021-03-31 12:58:03,143 [standard-inventory-qcow2/MainThread  ] [INFO ]:ssh -p 3317 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i /tmp/inventory-cloudy3tt8cd5/identity root@127.0.0.3
+2021-03-31 12:58:03,143 [standard-inventory-qcow2/MainThread  ] [INFO ]:Password is: foobar
+2021-03-31 12:58:03,143 [standard-inventory-qcow2/MainThread  ] [INFO ]:Cloudinit init location: /tmp/inventory-cloudy3tt8cd5
+2021-03-31 12:58:03,143 [standard-inventory-qcow2/MainThread  ] [INFO ]:export ANSIBLE_INVENTORY=/tmp/inventory-cloudy3tt8cd5/inventory
+2021-03-31 12:58:03,143 [standard-inventory-qcow2/MainThread  ] [INFO ]:Wait until parent for provision-script (ansible-playbook) dies or qemu.
+2021-03-31 12:58:09,149 [standard-inventory-qcow2/MainThread  ] [INFO ]:Either parent process or VM process is gone.
+2021-03-31 12:58:09,149 [standard-inventory-qcow2/MainThread  ] [INFO ]:kill 332150 # when finished to debug VM.
+2021-03-31 12:58:35,206 [standard-inventory-qcow2/MainThread  ] [INFO ]:Diagnose ending.
+2021-03-31 12:59:20,286 [standard-inventory-qcow2/MainThread  ] [INFO ]:Start provisioner.
+2021-03-31 12:59:20,286 [standard-inventory-qcow2/MainThread  ] [INFO ]:Path to ansible: /usr/bin/ansible
+2021-03-31 12:59:20,289 [standard-inventory-qcow2/MainThread  ] [INFO ]:Launching virtual machine for /home/spetrosi/Documents/images/rhel-guest-image-8.3-401.x86_64.qcow2
+2021-03-31 12:59:20,337 [standard-inventory-qcow2/MainThread  ] [INFO ]:qemu-kvm is using virtio-rng device
+2021-03-31 12:59:20,353 [standard-inventory-qcow2/MainThread  ] [INFO ]:Qemu CMD: /usr/bin/qemu-kvm -cpu host -enable-kvm -display none -smp 5,sockets=5,cores=1,threads=1 -m 4096 -drive if=none,file=/home/spetrosi/Documents/images/rhel-guest-image-8.3-401.x86_64.qcow2,id=virtio-disk0 -device virtio-blk-pci,drive=virtio-disk0,bootindex=1 -snapshot -cdrom /tmp/inventory-cloudw5jn5jsl/cloud-init.iso -net nic,model=virtio -net user,hostfwd=tcp:127.0.0.3:4172-:22 -device virtio-rng -rtc base=utc -serial chardev:pts2 -chardev file,id=pts2,path=/home/spetrosi/.ansible/collections/ansible_collections/microsoft/sql/tests/server/artifacts/rhel-guest-image-8.3-401.x86_64.qcow2.guest.log -vnc 127.0.0.3:1,to=4095
+2021-03-31 12:59:25,359 [standard-inventory-qcow2/MainThread  ] [INFO ]:qemu-kvm is running with VNC server. PID: 332367
+2021-03-31 12:59:25,359 [standard-inventory-qcow2/MainThread  ] [INFO ]:netstat -ltpn4 | grep 332367 # to find VNC server port
+2021-03-31 13:00:17,868 [standard-inventory-qcow2/MainThread  ] [INFO ]:ssh -p 4172 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i /tmp/inventory-cloudw5jn5jsl/identity root@127.0.0.3
+2021-03-31 13:00:17,869 [standard-inventory-qcow2/MainThread  ] [INFO ]:Password is: foobar
+2021-03-31 13:00:17,869 [standard-inventory-qcow2/MainThread  ] [INFO ]:Cloudinit init location: /tmp/inventory-cloudw5jn5jsl
+2021-03-31 13:00:17,869 [standard-inventory-qcow2/MainThread  ] [INFO ]:export ANSIBLE_INVENTORY=/tmp/inventory-cloudw5jn5jsl/inventory
+2021-03-31 13:00:17,869 [standard-inventory-qcow2/MainThread  ] [INFO ]:Wait until parent for provision-script (ansible-playbook) dies or qemu.
+2021-03-31 13:00:23,875 [standard-inventory-qcow2/MainThread  ] [INFO ]:Either parent process or VM process is gone.
+2021-03-31 13:00:23,876 [standard-inventory-qcow2/MainThread  ] [INFO ]:kill 332588 # when finished to debug VM.
+2021-03-31 13:12:49,089 [standard-inventory-qcow2/MainThread  ] [INFO ]:Diagnose ending.
+2021-03-31 13:12:50,378 [standard-inventory-qcow2/MainThread  ] [INFO ]:Start provisioner.
+2021-03-31 13:12:50,378 [standard-inventory-qcow2/MainThread  ] [INFO ]:Path to ansible: /usr/bin/ansible
+2021-03-31 13:12:50,382 [standard-inventory-qcow2/MainThread  ] [INFO ]:Launching virtual machine for /home/spetrosi/Documents/images/rhel-guest-image-8.3-401.x86_64.qcow2
+2021-03-31 13:12:50,430 [standard-inventory-qcow2/MainThread  ] [INFO ]:qemu-kvm is using virtio-rng device
+2021-03-31 13:12:50,447 [standard-inventory-qcow2/MainThread  ] [INFO ]:Qemu CMD: /usr/bin/qemu-kvm -cpu host -enable-kvm -display none -smp 5,sockets=5,cores=1,threads=1 -m 4096 -drive if=none,file=/home/spetrosi/Documents/images/rhel-guest-image-8.3-401.x86_64.qcow2,id=virtio-disk0 -device virtio-blk-pci,drive=virtio-disk0,bootindex=1 -snapshot -cdrom /tmp/inventory-clouddi2makbt/cloud-init.iso -net nic,model=virtio -net user,hostfwd=tcp:127.0.0.3:3686-:22 -device virtio-rng -rtc base=utc -serial chardev:pts2 -chardev file,id=pts2,path=/home/spetrosi/.ansible/collections/ansible_collections/microsoft/sql/tests/server/artifacts/rhel-guest-image-8.3-401.x86_64.qcow2.guest.log -vnc 127.0.0.3:1,to=4095
+2021-03-31 13:12:55,453 [standard-inventory-qcow2/MainThread  ] [INFO ]:qemu-kvm is running with VNC server. PID: 333362
+2021-03-31 13:12:55,453 [standard-inventory-qcow2/MainThread  ] [INFO ]:netstat -ltpn4 | grep 333362 # to find VNC server port
+2021-03-31 13:13:44,758 [standard-inventory-qcow2/MainThread  ] [INFO ]:ssh -p 3686 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i /tmp/inventory-clouddi2makbt/identity root@127.0.0.3
+2021-03-31 13:13:44,758 [standard-inventory-qcow2/MainThread  ] [INFO ]:Password is: foobar
+2021-03-31 13:13:44,758 [standard-inventory-qcow2/MainThread  ] [INFO ]:Cloudinit init location: /tmp/inventory-clouddi2makbt
+2021-03-31 13:13:44,758 [standard-inventory-qcow2/MainThread  ] [INFO ]:export ANSIBLE_INVENTORY=/tmp/inventory-clouddi2makbt/inventory
+2021-03-31 13:13:44,758 [standard-inventory-qcow2/MainThread  ] [INFO ]:Wait until parent for provision-script (ansible-playbook) dies or qemu.
+2021-03-31 13:13:50,765 [standard-inventory-qcow2/MainThread  ] [INFO ]:Either parent process or VM process is gone.
+2021-03-31 13:13:50,765 [standard-inventory-qcow2/MainThread  ] [INFO ]:kill 333579 # when finished to debug VM.
+2021-03-31 13:18:53,795 [standard-inventory-qcow2/MainThread  ] [INFO ]:Diagnose ending.
+2021-03-31 13:18:57,924 [standard-inventory-qcow2/MainThread  ] [INFO ]:Start provisioner.
+2021-03-31 13:18:57,924 [standard-inventory-qcow2/MainThread  ] [INFO ]:Path to ansible: /usr/bin/ansible
+2021-03-31 13:18:57,928 [standard-inventory-qcow2/MainThread  ] [INFO ]:Launching virtual machine for /home/spetrosi/Documents/images/rhel-guest-image-8.3-401.x86_64.qcow2
+2021-03-31 13:18:57,978 [standard-inventory-qcow2/MainThread  ] [INFO ]:qemu-kvm is using virtio-rng device
+2021-03-31 13:18:57,994 [standard-inventory-qcow2/MainThread  ] [INFO ]:Qemu CMD: /usr/bin/qemu-kvm -cpu host -enable-kvm -display none -smp 5,sockets=5,cores=1,threads=1 -m 4096 -drive if=none,file=/home/spetrosi/Documents/images/rhel-guest-image-8.3-401.x86_64.qcow2,id=virtio-disk0 -device virtio-blk-pci,drive=virtio-disk0,bootindex=1 -snapshot -cdrom /tmp/inventory-cloudi3stjiy1/cloud-init.iso -net nic,model=virtio -net user,hostfwd=tcp:127.0.0.3:3538-:22 -device virtio-rng -rtc base=utc -serial chardev:pts2 -chardev file,id=pts2,path=/home/spetrosi/.ansible/collections/ansible_collections/microsoft/sql/tests/server/artifacts/rhel-guest-image-8.3-401.x86_64.qcow2.guest.log -vnc 127.0.0.3:1,to=4095
+2021-03-31 13:19:03,000 [standard-inventory-qcow2/MainThread  ] [INFO ]:qemu-kvm is running with VNC server. PID: 334039
+2021-03-31 13:19:03,000 [standard-inventory-qcow2/MainThread  ] [INFO ]:netstat -ltpn4 | grep 334039 # to find VNC server port
+2021-03-31 13:19:52,053 [standard-inventory-qcow2/MainThread  ] [INFO ]:ssh -p 3538 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i /tmp/inventory-cloudi3stjiy1/identity root@127.0.0.3
+2021-03-31 13:19:52,053 [standard-inventory-qcow2/MainThread  ] [INFO ]:Password is: foobar
+2021-03-31 13:19:52,053 [standard-inventory-qcow2/MainThread  ] [INFO ]:Cloudinit init location: /tmp/inventory-cloudi3stjiy1
+2021-03-31 13:19:52,053 [standard-inventory-qcow2/MainThread  ] [INFO ]:export ANSIBLE_INVENTORY=/tmp/inventory-cloudi3stjiy1/inventory
+2021-03-31 13:19:52,053 [standard-inventory-qcow2/MainThread  ] [INFO ]:Wait until parent for provision-script (ansible-playbook) dies or qemu.
+2021-03-31 13:19:58,060 [standard-inventory-qcow2/MainThread  ] [INFO ]:Either parent process or VM process is gone.
+2021-03-31 13:19:58,060 [standard-inventory-qcow2/MainThread  ] [INFO ]:kill 334261 # when finished to debug VM.
+2021-03-31 13:20:11,365 [standard-inventory-qcow2/MainThread  ] [INFO ]:Diagnose ending.
+2021-03-31 13:21:16,427 [standard-inventory-qcow2/MainThread  ] [INFO ]:Start provisioner.
+2021-03-31 13:21:16,427 [standard-inventory-qcow2/MainThread  ] [INFO ]:Path to ansible: /usr/bin/ansible
+2021-03-31 13:21:16,431 [standard-inventory-qcow2/MainThread  ] [INFO ]:Launching virtual machine for /home/spetrosi/Documents/images/rhel-guest-image-8.3-401.x86_64.qcow2
+2021-03-31 13:21:16,479 [standard-inventory-qcow2/MainThread  ] [INFO ]:qemu-kvm is using virtio-rng device
+2021-03-31 13:21:16,496 [standard-inventory-qcow2/MainThread  ] [INFO ]:Qemu CMD: /usr/bin/qemu-kvm -cpu host -enable-kvm -display none -smp 5,sockets=5,cores=1,threads=1 -m 4096 -drive if=none,file=/home/spetrosi/Documents/images/rhel-guest-image-8.3-401.x86_64.qcow2,id=virtio-disk0 -device virtio-blk-pci,drive=virtio-disk0,bootindex=1 -snapshot -cdrom /tmp/inventory-cloudjbrvmqb0/cloud-init.iso -net nic,model=virtio -net user,hostfwd=tcp:127.0.0.3:4273-:22 -device virtio-rng -rtc base=utc -serial chardev:pts2 -chardev file,id=pts2,path=/home/spetrosi/.ansible/collections/ansible_collections/microsoft/sql/tests/server/artifacts/rhel-guest-image-8.3-401.x86_64.qcow2.guest.log -vnc 127.0.0.3:1,to=4095
+2021-03-31 13:21:21,503 [standard-inventory-qcow2/MainThread  ] [INFO ]:qemu-kvm is running with VNC server. PID: 334498
+2021-03-31 13:21:21,503 [standard-inventory-qcow2/MainThread  ] [INFO ]:netstat -ltpn4 | grep 334498 # to find VNC server port
+2021-03-31 13:22:10,964 [standard-inventory-qcow2/MainThread  ] [INFO ]:ssh -p 4273 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i /tmp/inventory-cloudjbrvmqb0/identity root@127.0.0.3
+2021-03-31 13:22:10,964 [standard-inventory-qcow2/MainThread  ] [INFO ]:Password is: foobar
+2021-03-31 13:22:10,964 [standard-inventory-qcow2/MainThread  ] [INFO ]:Cloudinit init location: /tmp/inventory-cloudjbrvmqb0
+2021-03-31 13:22:10,964 [standard-inventory-qcow2/MainThread  ] [INFO ]:export ANSIBLE_INVENTORY=/tmp/inventory-cloudjbrvmqb0/inventory
+2021-03-31 13:22:10,964 [standard-inventory-qcow2/MainThread  ] [INFO ]:Wait until parent for provision-script (ansible-playbook) dies or qemu.
+2021-03-31 13:22:16,970 [standard-inventory-qcow2/MainThread  ] [INFO ]:Either parent process or VM process is gone.
+2021-03-31 13:22:16,971 [standard-inventory-qcow2/MainThread  ] [INFO ]:kill 334720 # when finished to debug VM.
+2021-03-31 13:27:46,423 [standard-inventory-qcow2/MainThread  ] [INFO ]:Diagnose ending.
+2021-03-31 13:30:21,984 [standard-inventory-qcow2/MainThread  ] [INFO ]:Start provisioner.
+2021-03-31 13:30:21,984 [standard-inventory-qcow2/MainThread  ] [INFO ]:Path to ansible: /usr/bin/ansible
+2021-03-31 13:30:21,988 [standard-inventory-qcow2/MainThread  ] [INFO ]:Launching virtual machine for /home/spetrosi/Documents/images/rhel-guest-image-8.3-401.x86_64.qcow2
+2021-03-31 13:30:22,039 [standard-inventory-qcow2/MainThread  ] [INFO ]:qemu-kvm is using virtio-rng device
+2021-03-31 13:30:22,055 [standard-inventory-qcow2/MainThread  ] [INFO ]:Qemu CMD: /usr/bin/qemu-kvm -cpu host -enable-kvm -display none -smp 5,sockets=5,cores=1,threads=1 -m 4096 -drive if=none,file=/home/spetrosi/Documents/images/rhel-guest-image-8.3-401.x86_64.qcow2,id=virtio-disk0 -device virtio-blk-pci,drive=virtio-disk0,bootindex=1 -snapshot -cdrom /tmp/inventory-cloudtoalt5fb/cloud-init.iso -net nic,model=virtio -net user,hostfwd=tcp:127.0.0.3:3477-:22 -device virtio-rng -rtc base=utc -serial chardev:pts2 -chardev file,id=pts2,path=/home/spetrosi/.ansible/collections/ansible_collections/microsoft/sql/tests/server/artifacts/rhel-guest-image-8.3-401.x86_64.qcow2.guest.log -vnc 127.0.0.3:1,to=4095
+2021-03-31 13:30:27,061 [standard-inventory-qcow2/MainThread  ] [INFO ]:qemu-kvm is running with VNC server. PID: 336040
+2021-03-31 13:30:27,061 [standard-inventory-qcow2/MainThread  ] [INFO ]:netstat -ltpn4 | grep 336040 # to find VNC server port
+2021-03-31 13:31:16,964 [standard-inventory-qcow2/MainThread  ] [INFO ]:ssh -p 3477 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i /tmp/inventory-cloudtoalt5fb/identity root@127.0.0.3
+2021-03-31 13:31:16,964 [standard-inventory-qcow2/MainThread  ] [INFO ]:Password is: foobar
+2021-03-31 13:31:16,964 [standard-inventory-qcow2/MainThread  ] [INFO ]:Cloudinit init location: /tmp/inventory-cloudtoalt5fb
+2021-03-31 13:31:16,964 [standard-inventory-qcow2/MainThread  ] [INFO ]:export ANSIBLE_INVENTORY=/tmp/inventory-cloudtoalt5fb/inventory
+2021-03-31 13:31:16,964 [standard-inventory-qcow2/MainThread  ] [INFO ]:Wait until parent for provision-script (ansible-playbook) dies or qemu.
+2021-03-31 13:35:20,204 [standard-inventory-qcow2/MainThread  ] [INFO ]:Either parent process or VM process is gone.
+2021-03-31 13:35:20,204 [standard-inventory-qcow2/MainThread  ] [INFO ]:kill 336280 # when finished to debug VM.
+2021-03-31 13:35:32,981 [standard-inventory-qcow2/MainThread  ] [INFO ]:Diagnose ending.
+2021-03-31 13:49:37,343 [standard-inventory-qcow2/MainThread  ] [INFO ]:Start provisioner.
+2021-03-31 13:49:37,343 [standard-inventory-qcow2/MainThread  ] [INFO ]:Path to ansible: /usr/bin/ansible
+2021-03-31 13:49:37,348 [standard-inventory-qcow2/MainThread  ] [INFO ]:Launching virtual machine for /home/spetrosi/Documents/images/rhel-guest-image-8.3-401.x86_64.qcow2
+2021-03-31 13:49:37,457 [standard-inventory-qcow2/MainThread  ] [INFO ]:qemu-kvm is using virtio-rng device
+2021-03-31 13:49:37,473 [standard-inventory-qcow2/MainThread  ] [INFO ]:Qemu CMD: /usr/bin/qemu-kvm -cpu host -enable-kvm -display none -smp 5,sockets=5,cores=1,threads=1 -m 4096 -drive if=none,file=/home/spetrosi/Documents/images/rhel-guest-image-8.3-401.x86_64.qcow2,id=virtio-disk0 -device virtio-blk-pci,drive=virtio-disk0,bootindex=1 -snapshot -cdrom /tmp/inventory-cloudk3l6i8_x/cloud-init.iso -net nic,model=virtio -net user,hostfwd=tcp:127.0.0.3:3178-:22 -device virtio-rng -rtc base=utc -serial chardev:pts2 -chardev file,id=pts2,path=/home/spetrosi/.ansible/collections/ansible_collections/microsoft/sql/tests/server/artifacts/rhel-guest-image-8.3-401.x86_64.qcow2.guest.log -vnc 127.0.0.3:1,to=4095
+2021-03-31 13:49:42,479 [standard-inventory-qcow2/MainThread  ] [INFO ]:qemu-kvm is running with VNC server. PID: 341143
+2021-03-31 13:49:42,479 [standard-inventory-qcow2/MainThread  ] [INFO ]:netstat -ltpn4 | grep 341143 # to find VNC server port
+2021-03-31 13:50:33,081 [standard-inventory-qcow2/MainThread  ] [INFO ]:ssh -p 3178 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i /tmp/inventory-cloudk3l6i8_x/identity root@127.0.0.3
+2021-03-31 13:50:33,081 [standard-inventory-qcow2/MainThread  ] [INFO ]:Password is: foobar
+2021-03-31 13:50:33,081 [standard-inventory-qcow2/MainThread  ] [INFO ]:Cloudinit init location: /tmp/inventory-cloudk3l6i8_x
+2021-03-31 13:50:33,081 [standard-inventory-qcow2/MainThread  ] [INFO ]:export ANSIBLE_INVENTORY=/tmp/inventory-cloudk3l6i8_x/inventory
+2021-03-31 13:50:33,081 [standard-inventory-qcow2/MainThread  ] [INFO ]:Wait until parent for provision-script (ansible-playbook) dies or qemu.
+2021-03-31 13:53:06,234 [standard-inventory-qcow2/MainThread  ] [INFO ]:Either parent process or VM process is gone.
+2021-03-31 13:53:06,241 [standard-inventory-qcow2/MainThread  ] [INFO ]:kill 341379 # when finished to debug VM.
+2021-03-31 14:23:21,520 [standard-inventory-qcow2/MainThread  ] [INFO ]:Diagnose ending.
