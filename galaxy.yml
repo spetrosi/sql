@@ -23,4 +23,5 @@ tags:
   - "sql"
   - "database"
 
-build_ignore: []
+build_ignore:
+  - tests/server/artifacts
