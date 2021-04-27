@@ -6,16 +6,14 @@ The SQL collection contains a role for managing Microsoft SQL Server.
 ## Currently supported distributions
 
 * Fedora
-* Red Hat Enterprise Linux (RHEL 7+)
-* RHEL 7+ derivatives such as CentOS 7+
+* Red Hat Enterprise Linux 7 (RHEL 7+)
+* Red Hat Enterprise Linux 8 (RHEL 7+)
+* RHEL derivatives such as CentOS
 
 ## Installation
 
-There are currently two ways to use the Microsoft SQL Collection in your setup.
+You can install the collection from Ansible Galaxy by entering the following command:
 
-### Installation from Ansible Galaxy
-
-You can install the collection from Ansible Galaxy by running:
 ```
 ansible-galaxy collection install microsoft.sql
 ```
@@ -29,7 +27,3 @@ Please see the [Using Ansible collections documentation](https://docs.ansible.co
 ### Supported Ansible Versions
 
 The supported Ansible versions are aligned with currently maintained Ansible versions that support Collections (Ansible 2.9 and later). You can find the list of maintained Ansible versions [here](https://docs.ansible.com/ansible/latest/reference_appendices/release_and_maintenance.html#release-status).
-
-### Supported Roles
-
-  * server
