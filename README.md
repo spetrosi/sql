@@ -7,7 +7,7 @@ The SQL collection contains a role for managing Microsoft SQL Server.
 
 * Fedora
 * Red Hat Enterprise Linux 7 (RHEL 7+)
-* Red Hat Enterprise Linux 8 (RHEL 7+)
+* Red Hat Enterprise Linux 8 (RHEL 8+)
 * RHEL derivatives such as CentOS
 
 ## Installation
@@ -22,8 +22,6 @@ After the installation, the role is available as `microsoft.sql.server`.
 
 Please see the [Using Ansible collections documentation](https://docs.ansible.com/ansible/devel/user_guide/collections_using.html) for further details.
 
-## Support
-
-### Supported Ansible Versions
+## Supported Ansible Versions
 
 The supported Ansible versions are aligned with currently maintained Ansible versions that support Collections (Ansible 2.9 and later). You can find the list of maintained Ansible versions [here](https://docs.ansible.com/ansible/latest/reference_appendices/release_and_maintenance.html#release-status).
