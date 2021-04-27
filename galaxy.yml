@@ -1,6 +1,6 @@
 namespace: "microsoft"
 name: "sql"
-version: "1.0.6"
+version: "1.0.8"
 description: "An Ansible role for Microsoft SQL Server management"
 
 authors:
