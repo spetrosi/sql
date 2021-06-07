@@ -96,9 +96,6 @@ BuildRequires: python3
 BuildRequires: python3-six
 BuildRequires: python3dist(ruamel.yaml)
 
-Requires: python3-jmespath
-Requires: python3-netaddr
-
 %if %{undefined __ansible_provides}
 Provides: ansible-collection(%{collection_namespace}.%{collection_name}) = %{collection_version}
 %endif
