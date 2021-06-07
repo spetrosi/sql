@@ -35,17 +35,11 @@ BuildRequires: ansible >= 2.9.10
 %endif
 
 %if %{without ansible}
-# Empty command. We don't have ansible-galaxy.
-%define ansible_collection_build() tar -cf %{_tmppath}/%{collection_namespace}-%{collection_name}-%{version}.tar.gz .
-%else
-%define ansible_collection_build() ansible-galaxy collection build
-%endif
-
-%if %{without ansible}
+# We don't have ansible-galaxy.
 # Simply copy everything instead of galaxy-installing the built artifact.
-%define ansible_collection_install() mkdir -p %{buildroot}%{ansible_collection_files}/%{collection_name}; (cd %{buildroot}%{ansible_collection_files}/%{collection_name}; tar -xf %{_tmppath}/%{collection_namespace}-%{collection_name}-%{version}.tar.gz)
+%define ansible_collection_build_install() tar -cf %{_tmppath}/%{collection_namespace}-%{collection_name}-%{version}.tar.gz .; mkdir -p %{buildroot}%{ansible_collection_files}/%{collection_name}; (cd %{buildroot}%{ansible_collection_files}/%{collection_name}; tar -xf %{_tmppath}/%{collection_namespace}-%{collection_name}-%{version}.tar.gz)
 %else
-%define ansible_collection_install() ansible-galaxy collection install -n -p %{buildroot}%{_datadir}/ansible/collections %{collection_namespace}-%{collection_name}-%{version}.tar.gz
+%define ansible_collection_build_install() ansible-galaxy collection build; ansible-galaxy collection install -n -p %{buildroot}%{_datadir}/ansible/collections %{collection_namespace}-%{collection_name}-%{version}.tar.gz
 %endif
 
 # For each role, call defcommit() and the point to it with SourceN: %{archiveurlN}.
@@ -177,20 +171,8 @@ done
 # removing dot files/dirs
 rm -r .collections/ansible_collections/%{collection_namespace}/%{collection_name}/.[A-Za-z]*
 
-# converting README.md to README.html for collection
-readmes=".collections/ansible_collections/%{collection_namespace}/%{collection_name}/README.md"
-for rolename in %{rolenames}; do
-    readmes="${readmes} .collections/ansible_collections/%{collection_namespace}/%{collection_name}/roles/${COLLECTION_ROLENAMES[${rolename}]}/README.md"
-done
-sh md2html.sh $readmes
-
 # Copy galaxy.yml to the collection directory
 cp -p galaxy.yml .collections/ansible_collections/%{collection_namespace}/%{collection_name}
-
-# Build the collections
-pushd .collections/ansible_collections/%{collection_namespace}/%{collection_name}/
-%ansible_collection_build
-popd
 
 %install
 mkdir -p $RPM_BUILD_ROOT%{installbase}
@@ -227,7 +209,7 @@ rm -r $RPM_BUILD_ROOT%{installbase}/*/.[A-Za-z]*
 rm -r $RPM_BUILD_ROOT%{installbase}/*/molecule
 
 pushd .collections/ansible_collections/%{collection_namespace}/%{collection_name}/
-%ansible_collection_install
+%ansible_collection_build_install
 popd
 
 mkdir -p $RPM_BUILD_ROOT%{_pkgdocdir}/collection
@@ -235,10 +217,7 @@ mkdir -p $RPM_BUILD_ROOT%{_pkgdocdir}/collection/roles
 
 # Copy the collection README files to the collection
 cp -p %{buildroot}%{ansible_collection_files}/%{collection_name}/README.md \
-   %{buildroot}%{ansible_collection_files}/%{collection_name}/README.html \
    $RPM_BUILD_ROOT%{_pkgdocdir}/collection
-# Remove html files from the collection directory
-rm -f %{buildroot}%{ansible_collection_files}/%{collection_name}/README.html
 
 # Declare the array containing collection rolenames to convert roles to
 declare -A COLLECTION_ROLENAMES=(%{collection_rolenames})
@@ -247,12 +226,16 @@ for rolename in %{rolenames}; do
   if [ -f "%{buildroot}%{ansible_collection_files}%{collection_name}/roles/${COLLECTION_ROLENAMES[${rolename}]}/README.md" ]; then
     mkdir -p $RPM_BUILD_ROOT%{_pkgdocdir}/collection/roles/${COLLECTION_ROLENAMES[${rolename}]}
     cp -p %{buildroot}%{ansible_collection_files}/%{collection_name}/roles/${COLLECTION_ROLENAMES[${rolename}]}/README.md \
-        %{buildroot}%{ansible_collection_files}/%{collection_name}/roles/${COLLECTION_ROLENAMES[${rolename}]}/README.html \
         $RPM_BUILD_ROOT%{_pkgdocdir}/collection/roles/${COLLECTION_ROLENAMES[${rolename}]}
-    # Remove html files from the collection directory
-    rm -f %{buildroot}%{ansible_collection_files}/%{collection_name}/roles/${COLLECTION_ROLENAMES[${rolename}]}/README.html
   fi
 done
+
+# converting README.md to README.html for collection in $RPM_BUILD_ROOT%{_pkgdocdir}/collection
+readmes="$RPM_BUILD_ROOT%{_pkgdocdir}/collection/README.md"
+for rolename in %{rolenames}; do
+    readmes="${readmes} $RPM_BUILD_ROOT%{_pkgdocdir}/collection/roles/${COLLECTION_ROLENAMES[${rolename}]}/README.md"
+done
+sh md2html.sh $readmes
 
 %if %{with collection_artifact}
 # Copy collection artifact to /usr/share/ansible/collections/ for collection-artifact
