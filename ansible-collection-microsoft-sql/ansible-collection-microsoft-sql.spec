@@ -182,7 +182,7 @@ for rolename in %{rolenames}; do
     cp -pR "$rolename" "$RPM_BUILD_ROOT%{installbase}/${TARGET_ROLENAMES[${rolename}]}"
 done
 
-# Copy README, COPYING, and LICENCE files to the corresponding directories
+# Copy README, COPYING, and LICENSE files to the corresponding directories
 mkdir -p $RPM_BUILD_ROOT%{_pkglicensedir}
 for rolename in %{rolenames}; do
     mkdir -p "$RPM_BUILD_ROOT%{_pkgdocdir}/${TARGET_ROLENAMES[${rolename}]}"
@@ -344,4 +344,4 @@ fi
 
 %changelog
 * Thu Jun 3 2021 Sergei Petrosian <spetrosi@redhat.com> - 0.0.1-1
-- Initiale release
+- Initial release
