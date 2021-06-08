@@ -146,9 +146,9 @@ sh md2html.sh $readmes
 
 mkdir .collections
 # Copy README.md for the collection build
-cp mssql/.collection/README.md lsr_role2collection/collection_readme.md
+cp %{rolename1}/.collection/README.md lsr_role2collection/collection_readme.md
 # Copy galaxy.yml for the collection build
-cp mssql/.collection/galaxy.yml ./
+cp %{rolename1}/.collection/galaxy.yml ./
 # Ensure the correct entries in galaxy.yml
 ./galaxy_transform.py "%{collection_namespace}" "%{collection_name}" "%{collection_version}" "The Ansible role that manages Microsoft SQL Server" > galaxy.yml.tmp
 mv galaxy.yml.tmp galaxy.yml
