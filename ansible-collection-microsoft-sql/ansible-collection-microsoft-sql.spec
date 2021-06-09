@@ -158,7 +158,9 @@ declare -A COLLECTION_ROLENAMES=(%{collection_rolenames})
 
 # Convert roles to the collection format
 for rolename in %{rolenames}; do
-    python3 lsr_role2collection.py --role "$rolename" --src-path "$rolename" \
+    python3 lsr_role2collection.py --role "$rolename" \
+        --src-path "$rolename" \
+        --src-owner linux-system-roles \
         --dest-path .collections \
         --readme lsr_role2collection/collection_readme.md \
         --namespace %{collection_namespace} --collection %{collection_name} \
