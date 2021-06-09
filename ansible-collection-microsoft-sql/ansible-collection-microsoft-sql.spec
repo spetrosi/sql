@@ -60,8 +60,7 @@ BuildRequires: ansible >= 2.9.10
 %define defcommit() %{expand:%%global ref%{1} %{2}
 %%global shortcommit%{1} %%(c=%%{ref%{1}}; echo ${c:0:7})
 %%global extractdir%{1} %%{expand:%%getarchivedir %{1}}
-%%{!?repo%{1}:%%global repo%{1} %%{rolename%{1}}}
-%%global archiveurl%{1} %%{?forgeorg%{1}}%%{!?forgeorg%{1}:%%{parenturl}}%%{repo%{1}}/archive/%%{ref%{1}}/%%{repo%{1}}-%%{ref%{1}}.tar.gz
+%%global archiveurl%{1} %%{parenturl}%%{rolename%{1}}/archive/%%{ref%{1}}/%%{rolename%{1}}-%%{ref%{1}}.tar.gz
 %%global rolenames %%{?rolenames} %%{rolename%{1}}
 %%global roletodir%{1} [%{rolename%{1}}]="%{extractdir%{1}}"
 %%global rolestodir %%{?rolestodir} %{roletodir%{1}}
