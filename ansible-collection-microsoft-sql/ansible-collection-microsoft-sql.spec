@@ -149,7 +149,7 @@ cp %{rolename1}/.collection/README.md lsr_role2collection/collection_readme.md
 # Copy galaxy.yml for the collection build
 cp %{rolename1}/.collection/galaxy.yml ./
 # Ensure the correct entries in galaxy.yml
-./galaxy_transform.py "%{collection_namespace}" "%{collection_name}" "%{collection_version}" "The Ansible role that manages Microsoft SQL Server" > galaxy.yml.tmp
+./galaxy_transform.py "%{collection_namespace}" "%{collection_name}" "%{collection_version}" "Ansible collection for Microsoft SQL Server management" > galaxy.yml.tmp
 mv galaxy.yml.tmp galaxy.yml
 
 # Declare the array containing collection rolenames to convert roles to
