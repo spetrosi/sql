@@ -55,12 +55,12 @@ BuildRequires: ansible >= 2.9.10
 
 %define getarchivedir() %(p=%{basename:%{S:%{1}}}; echo ${p%%.%{archiveext}})
 
-%global parenturl https://github.com/linux-system-roles/
+%global parenturl https://github.com/linux-system-roles
 
 %define defcommit() %{expand:%%global ref%{1} %{2}
 %%global shortcommit%{1} %%(c=%%{ref%{1}}; echo ${c:0:7})
 %%global extractdir%{1} %%{expand:%%getarchivedir %{1}}
-%%global archiveurl%{1} %%{parenturl}%%{rolename%{1}}/archive/%%{ref%{1}}/%%{rolename%{1}}-%%{ref%{1}}.tar.gz
+%%global archiveurl%{1} %%{parenturl}/%%{rolename%{1}}/archive/%%{ref%{1}}/%%{rolename%{1}}-%%{ref%{1}}.tar.gz
 %%global rolenames %%{?rolenames} %%{rolename%{1}}
 %%global roletodir%{1} [%{rolename%{1}}]="%{extractdir%{1}}"
 %%global rolestodir %%{?rolestodir} %{roletodir%{1}}
@@ -76,7 +76,7 @@ BuildRequires: ansible >= 2.9.10
 %global collection_rolename1 server
 
 %global mainid 17baba973c8c77b32ae65838a98dc4fbaf7b7b3e
-Source: %{parenturl}auto-maintenance/archive/%{mainid}/auto-maintenance-%{mainid}.tar.gz
+Source: %{parenturl}/auto-maintenance/archive/%{mainid}/auto-maintenance-%{mainid}.tar.gz
 Source1: %{archiveurl1}
 
 BuildArch: noarch
