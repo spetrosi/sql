@@ -8,7 +8,7 @@
 
 Name: ansible-collection-microsoft-sql
 Url: https://github.com/linux-system-roles/mssql
-Summary: The Ansible role to manage Microsoft SQL Server
+Summary: The Ansible collection for Microsoft SQL Server management
 Version: 0.0.1
 Release: 1%{?dist}
 
@@ -102,7 +102,8 @@ Provides: ansible-collection(%{collection_namespace}.%{collection_name}) = %{col
 Provides: ansible-collection-%{collection_namespace}-%{collection_name} = %{version}-%{release}
 
 %description
-The collection containing the Ansible role for Microsoft SQL Server management.
+This RPM installs the Ansible collection for Microsoft SQL Server management microsoft.sql.
+This RPM also installs the roles provided by the collection in the legacy roles format for users of Ansible < 2.9.
 
 %if %{with collection_artifact}
 %package collection-artifact
